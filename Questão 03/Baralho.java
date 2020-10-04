@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Baralho {
-    private List<Carta> monte;
+    private List<Carta> monte; //Pilha de Cartas
     private int cartaAtual;
     private final int TOTAL_DE_CARTAS = 40;
     private final String[] VALORES = {"Ás", "Dois", "Três", "Quatro", "Cinco", "Seis", "Sete", "Valete", "Dama", "Rei"};

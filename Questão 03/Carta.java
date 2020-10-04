@@ -1,7 +1,9 @@
 public class Carta {
+
     private String naipe;
     private String valor;
 
+    //Construtor
     public Carta(String naipe, String valor) {
         this.naipe = naipe;
         this.valor = valor;
