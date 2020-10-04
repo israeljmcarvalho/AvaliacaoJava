@@ -9,12 +9,11 @@ Deve ter um método privado `embaralharCartas()` que chama o método
 - um método privado `distribuirMaos()`, 
 que deve distribuir três cartas do baralho para cada jogador 
 (lembre-se do método `receberCarta` de `Jogador`). 
-
-
-
 Você também deve implementar um método `inicializaManilha()`, 
 que põe uma carta na meso (distribui uma carta do baralho e atribui a 
-`cartaVirada`). Esses métodos que você implementar, 
+`cartaVirada`). 
+
+Esses métodos que você implementar, 
 vão complementar a classe truco. 
 Para sua referência, segue o método `jogar()`, 
 que implementa a lógica básica do início do jogo:
@@ -46,9 +45,13 @@ public class Truco {
 
     public void distribuirMaos(){
         for (int i = 0; i < 3 ; i++) {
-            this.j1.receberCarta(baralho.distribuir);
-            this.j2.receberCarta(baralho.distribuir);
+            this.j1.receberCarta(baralho.distribuir()); //(lembre-se do método `receberCarta` de `Jogador`)
+            this.j2.receberCarta(baralho.distribuir()); //(lembre-se do método `receberCarta` de `Jogador`)
         }
+    }
+
+    public void inicializaManilha(){ //Você também deve implementar um método `inicializaManilha()`, 
+        this.cartaVirada = baralho.distribuir(); //que põe uma carta na meso (distribui uma carta do baralho e atribui a cartaVirada`)
     }
 
     public void jogar() {
